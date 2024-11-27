@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <!-- css files -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-transparent d-none">
+        <div class="container">
+            <a class="navbar-brand text-uppercase text-white" href="#">Smart login</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <button class="btn btn-outline-warning px-2 py-2" onclick="logout()">Logout</button>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <main class="d-flex justify-content-center">
+        <section class="mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="inner-login text-center p-5 ">
+                            <h1 class="pb-2">Smart Login System</h1>
+                            <form>
+                                <input id="email" class="form-control-login mb-3" type="text"
+                                    placeholder="Enter your email">
+                                <input id="password" class="form-control-login mb-4" type="password"
+                                    placeholder="Enter your password">
+                                <div class="alart text-danger mb-3 d-none">All inputs is required</div>
+                                <div class="alart text-danger mb-3 d-none">incorrect email or password</div>
+                                <button type="button" onclick="login()"
+                                    class="btn btn-outline-login my-2  w-100">Login</button>
+                                <p class="mt-1">Don’t have an account? <button type="button" onclick="SignUp()">Sign
+                                        Up</button></p>
+                            </form>
+                        </div>
+                        <div class="inner-regest text-center p-5 d-none">
+                            <h1 class="pb-2">Smart Login System</h1>
+                            <form>
+                                <input id="regesterName" class="form-control-login mb-3" type="text"
+                                    placeholder="Enter your name">
+                                <input id="regesterEmail" class="form-control-login mb-3" type="text"
+                                    placeholder="Enter your email">
+                                <input id="regesterPassword" class="form-control-login mb-4" type="password"
+                                    placeholder="Enter password">
+                                <div class="alart text-danger mb-3 d-none">All inputs is required</div>
+                                <div class="alart text-danger mb-3 d-none">email already exists</div>
+                                <div class="alart text-success mb-3 d-none">Success</div>
+                                <button type="button" onclick="regester()"
+                                    class="btn btn-outline-login my-2  w-100">Sign
+                                    Up</button>
+                                <p class="mt-1">You have an account? <button type="button"
+                                        onclick="Signin()">Signin</button></p>
+                            </form>
+                        </div>
+                        <div class="inner-home text-center p-5  d-none">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- js files -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
